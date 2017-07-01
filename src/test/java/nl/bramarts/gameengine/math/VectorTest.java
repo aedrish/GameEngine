@@ -57,4 +57,13 @@ public class VectorTest {
 		assertEquals(expectedY, vector.getY(), 0.001);
 		assertEquals(expectedZ, vector.getZ(), 0.001);
 	}
+	
+	@Test
+	public void testDotProduct() {
+		Vector vector = new Vector(2,3,4);
+		Vector vectorToMultiply = new Vector(3,4,5);
+		float expectedResult = 38;
+		float result = vector.dotVector(vectorToMultiply);
+		assertEquals(expectedResult, result, 0.001);
+	}
 }
