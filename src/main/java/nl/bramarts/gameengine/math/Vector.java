@@ -66,11 +66,24 @@ public class Vector {
 	 * @param vector the vector to multiply this vector with
 	 * @return the scaler
 	 */
-	public float dotVector(Vector vector ){
+	public float dotVector(Vector vector){
 		Vector temp = new Vector();
 		temp.setX(this.x * vector.getX());
 		temp.setY(this.y * vector.getY());
 		temp.setZ(this.z * vector.getZ());
 		return (temp.getX() + temp.getY() + temp.getZ());
+	}
+	
+	/**
+	 * The Cross Product a × b of two vectors is another vector that is at right angles to both
+	 * @param vector the vector to cross this vector with
+	 * @return the resulting vector
+	 */
+	public Vector crossVector(Vector vector) {
+		Vector temp = new Vector();
+		temp.setX(this.y * vector.getZ() - this.z * vector.getY());
+	    temp.setY(this.z * vector.getX() - this.x * vector.getZ());
+		temp.setZ(this.x * vector.getY() - this.y * vector.getX());
+		return temp;
 	}
 }

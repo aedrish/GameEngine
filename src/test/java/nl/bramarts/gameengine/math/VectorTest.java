@@ -66,4 +66,13 @@ public class VectorTest {
 		float result = vector.dotVector(vectorToMultiply);
 		assertEquals(expectedResult, result, 0.001);
 	}
+	
+	@Test
+	public void testCrossProduct() {
+		Vector vectorA = new Vector(2, 3, 4);
+		Vector vectorB = new Vector(5, 6, 7);
+		Vector expected = new Vector(-3, 6, -3);
+		Vector actually = vectorA.crossVector(vectorB);
+		assertEquals(expected, actually);
+	}
 }
