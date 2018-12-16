@@ -8,7 +8,7 @@ public class HelpCalculator {
 	}
 	
 	public static float calculatePhiFromVector(Vector v) {
-		// tan -1 wortel ((x² + y²) / z)
+		// tan -1 wortel ((xÂ² + yÂ²) / z)
 		Double upperPart = Math.sqrt(v.getX() * v.getX() + v.getY()*v.getY());
 		Double inputForInverseTangens = upperPart / v.getZ();
 		Double phi = Math.atan(inputForInverseTangens);
